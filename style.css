@@ -43,7 +43,7 @@ h2 {
 }
 
 body {
-    background-image: url(newBasket\images\nba.png);
+    background-image: url('images/nba.png');
     background-size:100%;
     opacity: 0.75;
 }
