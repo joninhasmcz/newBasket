@@ -24,10 +24,6 @@ function printarValor(total_coletivo_time1, total_coletivo_time2,total_individua
     dados.innerText = conteudo; 
 
     // setTimeout(() => {  console.log("World!"); }, 2000);
-
-    
-
-    
     
 
 }
@@ -43,11 +39,11 @@ function verificarFormulario(modalName) {
     var jogos_2 = document.getElementById("gamesTime2id").value;
     var prev_banca = document.getElementById("previd").value;
 
-    console.log(ponto_fei_1);
+    // console.log(ponto_fei_1);
 
 
     if (ponto_fei_1 == '' || ponto_tom_1 == '' || ponto_fei_2 == '' || ponto_tom_2 == '' || jogos_1 == '' || jogos_2 == '' || prev_banca == '') {
-        alert("Por favor preencha todos os campos.");
+        alert("Por favor, preencha todos os campos.");
     } else {
 
         // document.getElementById("meu_form").submit();

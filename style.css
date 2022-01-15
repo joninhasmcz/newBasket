@@ -18,9 +18,10 @@
     font-family: 'Open Sans', sans-serif; 
     font-size: 20px; 
     font-weight: 600; 
-    line-height: 18px; 
+    line-height: 22px; 
     /* margin: 0 0 72px; */
     width:fit-content;
+    
 }
 p {content:attr(type);display:block;margin:28px 0 0;font-size:12px;color:#0a0a0a; font-weight: bold;}
 
@@ -78,7 +79,7 @@ body {
 
 .modal {
     background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
@@ -145,14 +146,14 @@ form label {
 }
 
 form input[type="number"] {
-    background-color:#0a0a0a;
-    border:1px solid rgb(248, 248, 248);
+    background-color:#e6772d;
+    border:1px solid rgb(216, 54, 54);
     padding:5px;
 }
 
 form input[type="number"]:hover {
-    background-color:#c58b8b;
-    border:1px solid #333;
+    background-color:#3a30c4;
+    border:1px solid rgb(57, 34, 139);
     padding:5px;
 }
 
