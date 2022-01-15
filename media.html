@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Basquete 2.0</title>
+    <link rel="shortcut icon" href="newBasket\images\icon.png" type="image/png">
+
+
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+
+    <div id="div_form">
+        <h2 id="titulo">Média Basquete 2.0</h2>
+
+    </div>
+        <form name="meu_form" id = "meu_form">
+            <h2>Digite os Dados</h2>
+          
+            <p>Pontos Individuais Feitos Time 1</p>
+            <input type="number" id="timeFeiTime1id" placeholder="Time 1" required="required"/>
+            <p>Pontos Individuais Tomados Time 1</p>
+            <input type="number" id="timeTomTime1id" placeholder="Time 1" required="required"/>
+            <p>Pontos Coletivos Feitos Time 2</p>
+            <input type="number" id="timeFeiTime2id" placeholder="Time 2" required="required"/>
+            <p>Pontos Coletivos Tomados Time 2</p>
+            <input type="number" id="timeTomTime2id" placeholder="Time 2" required="required"/>
+
+            <p>Número de Jogos Time 1</p>
+            <input type="number" id="gamesTime1id" placeholder="Time 1" required="required"/>
+            <p>Número de Jogos Time 2</p>
+            <input type="number" id="gamesTime2id" placeholder="Time 2" required="required"/>
+          
+            <p>Previsão da Banca</p>
+            <input type="number" id="previd" placeholder="Banca Pontos" required = "required"/>
+            <br>
+            <br>
+            <!-- <button class="btn" onclick="verificarFormulario('dv-modal')">Enviar/Abrir Modal</button> -->
+            <input type="submit" class="btn" id="enviar" onclick="verificarFormulario('dv-modal')" value="Enviar"/>
+          </form>
+       
+
+    <div id = "dv-modal" class = "modal">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h2 id="titulo">
+                </h2>
+            </div>
+
+            <div class="modal-body">
+                <div id="caixa">
+
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn" onclick="closeModal('dv-modal')">Fechar</button>
+            </div>
+
+        </div>
+    </div>   
+    
+   
+    
+    
+
+    <script src="script.js"></script>
+
+    
+</body>
+</html>
