@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Média Basquete 2.0</title>
-    <link rel="shortcut icon" href="newBasket\images\icon.png" type="image/png">
+    <link rel="shortcut icon" href="images\icon.png" type="image/png">
 
 
     <link rel="stylesheet" href="style.css">
@@ -13,35 +13,42 @@
 </head>
 <body>
 
-    <div id="div_form">
-        <h2 id="titulo">Média Basquete 2.0</h2>
+    <div class="container-main">
 
+        <div id="div_form">
+            <h2 id="titulo">Média Basquete 2.0</h2>
+    
+        </div>
+    
+        <div class="meu-form">
+            
+            <form name="meu_form"  class = "meu_form">
+                <h2>Digite os Dados</h2>
+              
+                <p>Pontos Individuais Feitos Time 1</p>
+                <input type="number" id="timeFeiTime1id" placeholder="Time 1" required="required"/>
+                <p>Pontos Individuais Tomados Time 1</p>
+                <input type="number" id="timeTomTime1id" placeholder="Time 1" required="required"/>
+                <p>Pontos Inviduais Feitos Time 2</p>
+                <input type="number" id="timeFeiTime2id" placeholder="Time 2" required="required"/>
+                <p>Pontos Inviduais Tomados Time 2</p>
+                <input type="number" id="timeTomTime2id" placeholder="Time 2" required="required"/>
+        
+                <p>Número de Jogos Time 1</p>
+                <input type="number" id="gamesTime1id" placeholder="Time 1" required="required"/>
+                <p>Número de Jogos Time 2</p>
+                <input type="number" id="gamesTime2id" placeholder="Time 2" required="required"/>
+              
+                <p>Previsão da Banca</p>
+                <input type="number" id="previd" placeholder="Banca Pontos" required = "required"/>
+                <br>
+                <br>
+                <input type="button" class="btn" id="enviar" onclick="verificarFormulario('dv-modal')" value="Enviar"/>
+              </form>
+           
+        </div>
+        
     </div>
-        <form name="meu_form" id = "meu_form">
-            <h2>Digite os Dados</h2>
-          
-            <p>Pontos Individuais Feitos Time 1</p>
-            <input type="number" id="timeFeiTime1id" placeholder="Time 1" required="required"/>
-            <p>Pontos Individuais Tomados Time 1</p>
-            <input type="number" id="timeTomTime1id" placeholder="Time 1" required="required"/>
-            <p>Pontos Inviduais Feitos Time 2</p>
-            <input type="number" id="timeFeiTime2id" placeholder="Time 2" required="required"/>
-            <p>Pontos Inviduais Tomados Time 2</p>
-            <input type="number" id="timeTomTime2id" placeholder="Time 2" required="required"/>
-
-            <p>Número de Jogos Time 1</p>
-            <input type="number" id="gamesTime1id" placeholder="Time 1" required="required"/>
-            <p>Número de Jogos Time 2</p>
-            <input type="number" id="gamesTime2id" placeholder="Time 2" required="required"/>
-          
-            <p>Previsão da Banca</p>
-            <input type="number" id="previd" placeholder="Banca Pontos" required = "required"/>
-            <br>
-            <br>
-            <!-- <button class="btn" onclick="verificarFormulario('dv-modal')">Enviar/Abrir Modal</button> -->
-            <input type="button" class="btn" id="enviar" onclick="verificarFormulario('dv-modal')" value="Enviar"/>
-          </form>
-       
 
     <div id = "dv-modal" class = "modal">
 
