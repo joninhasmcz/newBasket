@@ -3,27 +3,36 @@ var prev_banca;
 
 function printarValor(total_coletivo_time1, total_coletivo_time2,total_individual_time1, total_individual_time2, prev_banca) {
 
-         
-    var conteudo = "# Total Coletivo #\n\nPrimeiro Time: " + total_coletivo_time1 + "\nSegundo Time: " + total_coletivo_time2 + "\n\n" + 
-    "# Total Individual #\n\nPrimeiro Time: " + total_individual_time1 + "\nSegundo Time: " + total_individual_time2 + "\n\n#########\n\n" +
-    "Previsão da Banca: " + prev_banca + "\n\n" + "Média Geral Coletiva: " + (total_coletivo_time1 + total_coletivo_time2)/2 + "\n" + 
-    "Média Geral Individual: " + (total_individual_time1 + total_individual_time2) + "\n\n";
+    var conteudo_previsao = "";
+    var conteudo = " <h2>Total Coletivo</h2> <br>Primeiro Time: " + total_coletivo_time1 + "<br>Segundo Time: " + total_coletivo_time2 + "<br>" + 
+    "<br><h2>Total Individual</h2> <br>Primeiro Time: " + total_individual_time1 + "<br>Segundo Time: " + total_individual_time2 + "<br><br><hr width = 100% align = right noshade><br>" +
+    "<br><h2>Médias</h2><br>Previsão da Banca: " + prev_banca + "<br>" + "Média Geral Coletiva: " + (total_coletivo_time1 + total_coletivo_time2)/2 + "<br>" + 
+    "Média Geral Individual: " + (total_individual_time1 + total_individual_time2) + "<br>";
     if(prev_banca > (total_coletivo_time1 + total_coletivo_time2)/2) {
-        conteudo +="# Sugestão #\n\n Apostar para MENOR que a previsão da banca,\n baseado nos dados COLETIVOS...\n\n";
+        conteudo_previsao += "<h2>Sugestão</h2><br>" + "Apostar para" + ' <i class="fas fa-minus-square"></i> ' + "<br> baseado nos dados COLETIVOS...<br>";
     } else {
-        conteudo += "# Sugestão #\n\n Apostar para MAIOR que a previsão da banca,\n baseado nos dados COLETIVOS...\n\n";
+        conteudo_previsao += " <h2>Sugestão</h2> <br> Apostar para" + ' <i class="fas fa-plus-square"></i> ' + "<br> baseado nos dados COLETIVOS...<br>";
     }
+    conteudo_previsao += "<br><hr width = 100% align = right noshade><br>";
+
     if(prev_banca > (total_individual_time1 + total_individual_time2)) {
-        conteudo += "# Sugestão #\n\n Apostar para MENOR que a previsão da banca,\n baseado nos dados INDIVIDUAIS...\n\n";
+        conteudo_previsao += '<h2>Sugestão</h2><br>' + "Aposte para" + ' <i class="fas fa-minus-square"></i> ' + "<br> baseado nos dados INDIVIDUAIS...<br>";
     } else {
-        conteudo += "# Sugestão #\n\n Apostar para MAIOR que a previsão da banca,\n baseado nos dados INDIVIDUAIS...\n\n";
+        conteudo_previsao += " <h2>Sugestão</h2> <br> Apostar para" + ' <i class="fas fa-plus-square"></i>' + "<br> baseado nos dados INDIVIDUAIS...<br>";
     }  
+    
+    // console.log("CONTEUDO PREVISAO" + conteudo_previsao);
+    var dados_media = document.getElementById("media");
+    var dados_sugestao = document.getElementById("sugestao");
 
-    console.log(conteudo);
-    var dados = document.getElementById("caixa");
-    dados.innerText = conteudo; 
+    dados_media.innerHTML = conteudo; 
+    dados_sugestao.innerHTML = conteudo_previsao;
+    
+    
+    // <i class="fas fa-minus-square"></i>
 
-    // setTimeout(() => {  console.log("World!"); }, 2000);
+
+    //         <i class="fas fa-plus-square"></i>
     
 
 }
